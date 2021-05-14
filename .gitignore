@@ -1,0 +1,4 @@
+*.log
+*tmp*
+*.sql
+data/
