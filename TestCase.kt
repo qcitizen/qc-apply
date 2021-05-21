@@ -1,0 +1,3 @@
+interface TestCase {
+    fun test()
+}

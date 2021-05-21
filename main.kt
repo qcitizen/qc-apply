@@ -1,3 +1,3 @@
 fun main() {
-    println(QuantifiedCitizen.compress("aaabccccdd"))
+    NormalTestCase().test()
 }
