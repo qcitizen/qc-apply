@@ -43,4 +43,4 @@ Try to complete this task within 30 minutes.
 2. Add an empty file for your code and make a commit
 3. Make commits as you're working to help show your work
 4. When you're done submit your fork as a pull request back to this repo
-5. Send the link to jobs@quantifiedcitizen.com with some details about your experience.
+5. Send the link to careers@quantifiedcitizen.com with some details about your experience.
