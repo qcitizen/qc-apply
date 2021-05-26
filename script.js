@@ -8,12 +8,13 @@ const collapeConsecutiveValues = (str = '') => {
 		})
 		.join('')
 
-	const strArray = str.match(/([a-zA-Z])\1*/g).map((item) => {
-		if (item.length === 1) return item
-		return item[0] + item.length
-	})
-
-	return strArray.join('')
+	return str
+		.match(/([a-zA-Z])\1*/g)
+		.map((item) => {
+			if (item.length === 1) return item
+			return item[0] + item.length
+		})
+		.join('')
 }
 
 // test cases:
