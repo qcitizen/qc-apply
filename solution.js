@@ -1,6 +1,6 @@
-let strCompression = (str) => {
+const strCompression = (str) => {
   // removes number from input string
-  let noNumStr = str.replace(/[0-9]/g, '');
+  const noNumStr = str.replace(/[0-9]/g, '');
   let output = "";
 
   for (let i = 0; i < noNumStr.length; i++) {
@@ -24,7 +24,8 @@ let strCompression = (str) => {
   return output;
 }
 
-let testCase = (input, output) => {
+// function to display success or failure message
+const testCase = (input, output) => {
   if (strCompression(input) === output) {
     console.log("✅ All Tests Passed ✅");
   } else {
