@@ -40,7 +40,13 @@ defmodule Apply do
     end
     end)
     |> Enum.reverse
-    |> Enum.map(fn {char, char_count} -> char <> Integer.to_string(char_count) end)
+    |> Enum.map(fn {char, char_count} ->
+      if char_count > 1 do
+        char <> Integer.to_string(char_count)
+      else
+        char
+      end
+    end)
     |> Enum.join
   end
 end
