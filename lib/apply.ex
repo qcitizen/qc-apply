@@ -1,4 +1,27 @@
 defmodule Apply do
+  @doc """
+  Compresses an alphanumeric string, removing numeric characters and then
+  collapsing repeated alphabetic characters to the character and then the
+  number of repetitions.
+
+  ## Examples
+
+      iex> Apply.compress("aaabccccdd")
+      "a3bc4d2"
+
+      iex> Apply.compress("aaaaaffffffffffc")
+      "a5f10c"
+
+      iex> Apply.compress("abcd")
+      "abcd"
+
+      iex> Apply.compress("ccceee12eccceee")
+      "c3e4c3e3"
+
+      iex> Apply.compress("effeac01cb65c")
+      "ef2eac2bc"
+
+  """
   def compress(str) do
     str
     |> String.replace(~r/\d+/, "") # remove digits

@@ -1,3 +1,6 @@
+## Instructions
+
+The script can be run in iex with `mix compile` followed by `iex -S mix`. The required function Apply.compress can then be called interactively. 
 
 ## Exercise
 
