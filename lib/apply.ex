@@ -14,22 +14,22 @@ defmodule Apply do
     anything
   end
   @spec compress(String.t(),String.t(),String.t(),integer) :: String.t()
-  def compress(<<letter::bytes-size(1), rest::bytes>>, chars,last,count) when letter !== last do
+  defp compress(<<letter::bytes-size(1), rest::bytes>>, chars,last,count) when letter !== last do
     {chars,last,count} = concat_string(letter,chars,last,count)
     compress(rest,chars,last,count)
   end
-  def compress(<<letter::bytes-size(1), rest::bytes>>, chars,last,count) when letter === last do
+  defp compress(<<letter::bytes-size(1), rest::bytes>>, chars,last,count) when letter === last do
     compress(rest,chars,letter,count+1)
   end
-  def compress("",chars,last,count) when count<=1 do
+  defp compress("",chars,last,count) when count<=1 do
     chars<>last
   end
-  def compress("",chars,last,count)  do
+  defp compress("",chars,last,count)  do
     {result,_,_}= concat_string("",chars,last,count)
     result
   end
   @spec concat_string(String.t(),String.t(),String.t(),integer) :: {String.t(),String.t(),integer}
-  def concat_string(letter,chars,last,count) do
+  defp concat_string(letter,chars,last,count) do
     with false <- is_integer?(letter),true <- count>1 do
       {chars <> last <> to_string(count),letter,1}
     else
