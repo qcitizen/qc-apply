@@ -40,6 +40,7 @@ function compress(str) {
   return result;
 }
 
+assert.equal(compress(""), "", "Failed for empty string");
 assert.equal(compress("aaabccccdd"), "a3bc4d2", "Failed for a3bc4d2");
 assert.equal(compress("aaaaaffffffffffc"), "a5f10c", "Failed for aaaaaffffffffffc");
 assert.equal(compress("abcd"), "abcd", "Failed for abcd");
