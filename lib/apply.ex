@@ -5,12 +5,15 @@ defmodule Apply do
   The rules of the compression algorithm are defined by the test cases below.
 
   """
+  @spec compress(String.t()) :: String.t()
   def compress(<<letter::bytes-size(1), rest::bytes>>)do
-  compress(rest,"",letter,1)
+    compress(rest,"",letter,1)
   end
+  @spec compress(any()) :: any()
   def compress(anything)do
     anything
   end
+  @spec compress(String.t(),String.t(),String.t(),integer) :: String.t()
   def compress(<<letter::bytes-size(1), rest::bytes>>, chars,last,count) when letter !== last do
     {chars,last,count} = concat_string(letter,chars,last,count)
     compress(rest,chars,last,count)
@@ -25,6 +28,7 @@ defmodule Apply do
     {result,_,_}= concat_string("",chars,last,count)
     result
   end
+  @spec concat_string(String.t(),String.t(),String.t(),integer) :: {String.t(),String.t(),integer}
   def concat_string(letter,chars,last,count) do
     with false <- is_integer?(letter),true <- count>1 do
       {chars <> last <> to_string(count),letter,1}
