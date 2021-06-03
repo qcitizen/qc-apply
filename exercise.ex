@@ -8,7 +8,7 @@ defmodule MyApp.Exercise do
     end
   end
 
-  defp process_input([], _acc, value, main_value), do: main_value
+  defp process_input([], _acc, _value, main_value), do: main_value
 
   defp process_input([head | tail], acc, value, main_value) do
     case head == String.last(value) do
