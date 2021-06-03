@@ -2,7 +2,9 @@ defmodule Apply do
   def compress(<<letter::bytes-size(1), rest::bytes>>)do
   compress(rest,"",letter,1)
   end
-
+  def compress(anything)do
+    anything
+  end
   def compress(<<letter::bytes-size(1), rest::bytes>>, chars,last,count) when letter !== last do
     {chars,last,count} = concat_string(letter,chars,last,count)
     compress(rest,chars,last,count)
