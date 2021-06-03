@@ -17,4 +17,14 @@ defmodule Apply do
   def compress("",chars,last,count)  do
     chars<>last<>to_string(count)
   end
+  defp is_integer?(data) do
+    with data when is_number(data) <- String.to_integer(data) do
+      true
+    else
+      _ -> false
+    end
+  rescue
+    _ -> false
+  end
+
 end
