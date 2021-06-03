@@ -1,4 +1,10 @@
 defmodule Apply do
+  @doc """
+  Implementation for following exercise
+  Write a function that compresses an alphanumeric string by collapsing consecutive values.
+  The rules of the compression algorithm are defined by the test cases below.
+
+  """
   def compress(<<letter::bytes-size(1), rest::bytes>>)do
   compress(rest,"",letter,1)
   end
