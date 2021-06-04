@@ -1,4 +1,13 @@
-void main() async {}
+void main() async {
+  compress("abdc");
+}
+
+void compress(word) {
+  // Remove all numbers from the given word and reassign to it self
+  word = removeNumbers(word);
+  // Output the results to console
+  print(compressor(word));
+}
 
 /// Compressor is the function that accepts a word [String] and returns
 /// the compressed form of the word
