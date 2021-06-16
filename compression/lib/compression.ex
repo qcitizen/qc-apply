@@ -28,6 +28,7 @@ defmodule Compression do
   def compress(input_string \\ "") do
     input_string
     |> remove_numeric()
+    |> group_repeating()
   end
 
   @doc """
@@ -39,5 +40,23 @@ defmodule Compression do
   """
   def remove_numeric(input) do
     input |> String.replace(~r/[^\D]/, "")
+  end
+
+  @doc """
+  Group all ocurrences.
+
+  Given a text string group all contiguous text occurrences in blockst
+
+  This function returns a list with the repeating groups
+
+    ## Examples
+      iex> Compression.group_repeating("ccceeeeccceee")
+      :["ccc", "eeee", "ccc", "eee"]
+  """
+  def group_repeating(input) do
+    Regex.scan(~r/(.)(\1*)/, input)
+    |> Enum.reduce([], fn x, acc ->
+      acc ++ [List.first(x)]
+    end)
   end
 end
