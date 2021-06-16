@@ -10,19 +10,19 @@ defmodule Compression do
   the text string into a smaller string.
 
   ## Examples
-      iex> Compression.hello("aaabccccdd")
+      iex> Compression.compress("aaabccccdd")
       :a3bc4d2
 
-      iex> Compression.hello("aaaaaffffffffffc")
+      iex> Compression.compress("aaaaaffffffffffc")
       :a5f10c
 
-      iex> Compression.hello("abcd")
+      iex> Compression.compress("abcd")
       :abcd
 
-      iex> Compression.hello("ccceee12eccceee")
+      iex> Compression.compress("ccceee12eccceee")
       :c3e4c3e3
 
-      iex> Compression.hello("effeac01cb65c")
+      iex> Compression.compress("effeac01cb65c")
       :ef2eac2bc
   """
   def compress(input_string \\ "") do
@@ -34,7 +34,7 @@ defmodule Compression do
   Given a text string remove all non-character entries
 
     ## Examples
-      iex> Compression.hello("ccceee12eccceee")
+      iex> Compression.remove_numeric("ccceee12eccceee")
       :ccceeeeccceee
   """
   def remove_numeric(input) do
