@@ -40,7 +40,9 @@ defmodule Compression do
       iex> Compression.remove_numeric("ccceee12eccceee")
       "ccceeeeccceee"
   """
-  def remove_numeric(input \\ "") do
+  def remove_numeric(nil), do: ""
+
+  def remove_numeric(input) do
     input |> String.replace(~r/[^\D]/, "")
   end
 
