@@ -29,6 +29,8 @@ defmodule Compression do
     input_string
     |> remove_numeric()
     |> group_repeating()
+    |> transform()
+    |> Enum.join()
   end
 
   @doc """
@@ -57,6 +59,30 @@ defmodule Compression do
     Regex.scan(~r/(.)(\1*)/, input)
     |> Enum.reduce([], fn x, acc ->
       acc ++ [List.first(x)]
+    end)
+  end
+
+  @doc """
+  Transform input to desired output format.any()
+
+  Given a list of repeating groups, transform the inputs
+  into the desired outputs.
+
+    ## Examples
+      iex> Compression.transform(["aaa", "bbb", "c", "dd"])
+      ["a3", "b3", "c", "dd"]
+  """
+  def transform(groups \\ []) do
+    groups
+    |> Enum.reduce([], fn input, acc ->
+      first_char = String.at(input, 0) #First character
+      s_len = String.length(input) #String lenght
+
+      if s_len > 1 do
+        acc ++ [first_char <> "#{s_len}"] #Concat string
+      else
+        acc ++ [first_char]
+      end
     end)
   end
 end
