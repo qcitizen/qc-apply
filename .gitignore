@@ -2,3 +2,7 @@
 *tmp*
 *.sql
 data/
+
+_build
+.elixir_ls
+
