@@ -1,28 +1,32 @@
-
+## Preamble
 
 ```
 > A message from the editor:                              [2021-06-23]
 
-We've received a lot of great PR submissions from May to June. Some
-are still waiting for reviews; we haven't forgotten and we will
-respond soon.
+We've received a lot of really nice submissions over the past month.
+A few of the PRs are still waiting for reviews; we haven't forgotten
+and we will respond soon.
 
-The role we're hiring for at the moment is a **Senior full-stack dev**,
-with experience working in Elixir and Phoenix. We started this project
-late last year and it's currently in pre-production mode, where devops
-experience is valuable along with a security-first mindset and fine
-attention to detail as well.
+The role we're hiring for at the moment is a Senior Full-stack Dev,
+with experience working in Elixir/Phoenix. Experience as a lead dev
+or project ownwer is a bonus but not required (we want a programmer,
+first and foremost).
 
-We have more positions opening up over the next few months so we're
-keep track of the submissions coming in and we'll send another update
-as we know more. - QC
+The position is on our Phoenix project team. We started it late last
+year and it's currently in a pre-production phase. Experience with
+devops is valuable along with a security-first mindset and fine
+attention to detail in general as well.
+
+We have more positions opening up over the next few months so
+we're keeping track of the pull requests coming in and we'll
+have another update here as soon as we have more details. - QC
 
 ```
 
+---
 
 
-
-## Exercise
+# Exercise
 
 Write a function that compresses an alphanumeric string by collapsing consecutive values. The rules of the compression algorithm are defined by the test cases below.
 
