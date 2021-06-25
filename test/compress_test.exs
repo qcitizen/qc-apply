@@ -25,4 +25,12 @@ defmodule CompressorTest do
   test "compresses mattisagoodprogrammer to mat2isago2dprogram2er" do
     assert Compressor.compress("mattisagoodprogrammer") == "mat2isago2dprogram2er"
   end
+
+  test "compresses empty string to empty string" do
+    assert Compressor.compress("") == ""
+  end
+
+  test "compresses 11123334 to empty string" do
+    assert Compressor.compress("11123334") == ""
+  end
 end

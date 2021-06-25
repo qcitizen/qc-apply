@@ -33,7 +33,7 @@ defmodule Compressor do
     # and it's consecutive duplicate count next to it
     |> Enum.map(fn x ->
       case Enum.count(x) do
-        # Just show the letter if there's only 1
+        # Skip the number if the letter count is 1
         1 -> [Enum.at(x, 0)]
         # Otherwise show letter with count
         _ -> [Enum.at(x, 0), Enum.count(x)]
