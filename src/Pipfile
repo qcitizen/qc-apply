@@ -4,6 +4,8 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pytest = "*"
+compress = {editable = true, path = "."}
 
 [dev-packages]
 

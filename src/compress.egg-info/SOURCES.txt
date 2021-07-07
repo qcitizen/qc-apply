@@ -1,0 +1,7 @@
+setup.py
+compress.egg-info/PKG-INFO
+compress.egg-info/SOURCES.txt
+compress.egg-info/dependency_links.txt
+compress.egg-info/top_level.txt
+test/__init__.py
+test/test.py
