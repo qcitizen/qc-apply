@@ -1,28 +1,28 @@
 ## Preamble
 
 ```
-> A message from the editor:                              [2021-06-23]
+  > re: Message from the editor                             [2021-07-11]
 
-We've received a lot of really nice submissions over the past month.
-A few of the PRs are still waiting for reviews; we haven't forgotten
-and we will respond soon.
+  All of our open positions have been filled. As we bring on new members
+  to the team, we to take time to let the dust settle before continuing.
+  We find that we get a better picture that way of the role(s) that will
+  have the most impact on our velocity.
 
-The role we're hiring for at the moment is a Senior Full-stack Dev,
-with experience working in Elixir/Phoenix. Experience as a lead dev
-or project ownwer is a bonus but not required (we want a programmer,
-first and foremost).
+  We'll have more positions opening up soon so we're still keeping track
+  of the pull requests coming in. Some things we'll be interested in, in
+  no particular order: Devops (PaaS), Dart, Python and libs like Pandas,
+  Ruby, experience working in healthcare, compliance or various areas of
+  research, and of course anything related to helping others to improve
+  their mental-health & well-being.
 
-The position is on our Phoenix project team. We started it late last
-year and it's currently in a pre-production phase. Experience with
-devops is valuable along with a security-first mindset and fine
-attention to detail in general as well.
+  We are an equal opportunity employer. If you're not sure whether your
+  skills and experience would be a good fit, please email us anyway and
+  we can figure it out together. At the very least, we'll be pleased to
+  offer you any constructive feedback we can (but only if you ask). 🌻
 
-We have more positions opening up over the next few months so
-we're keeping track of the pull requests coming in and we'll
-have another update here as soon as we have more details. - QC
+  This notice will be updated again as we have more details to share. - QC
 
 ```
-
 ---
 
 
@@ -53,7 +53,7 @@ mat2isago2dprogram2er
 Try to complete this task within 30 minutes.
 
 
-## What we'll be looking at
+## What we look for
 
 - Code structure — specifically how readable and understandable it is
     - (Optional) Consider using of whitespace and inline doc strings for clarity
@@ -63,7 +63,7 @@ Try to complete this task within 30 minutes.
 - Bonus: Add a very basic test for each case
 
 
-## What we won't be looking at
+## What we _don't_ look for
 
 - Language — use whatever programming language you're most comfortable with
 - Number of lines — it can be any length as long as it's readable and understandable
@@ -72,8 +72,8 @@ Try to complete this task within 30 minutes.
 
 ## How to submit
 
-1. Fork this repo to a public one on your account
-2. Add an empty file for your code and make a commit
-3. Make commits as you're working to help show your work
-4. When you're done submit your fork as a pull request back to this repo
-5. Send the link to careers@quantifiedcitizen.com with some details about your experience.
+1. Fork this repo to a public one on your account.
+2. Add an empty file for your code and make a commit.
+3. Make granular commits as you go so that each one is readible with an accurate commit message.
+4. When you're done, submit your fork as a pull request back to this repo.
+5. To help us stay organized, please email us at careers@quantifiedcitizen.com with the link and a few details about your experience and/or interest in working with us.
