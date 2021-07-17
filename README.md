@@ -4,16 +4,17 @@
   > re: Message from the editor                             [2021-07-11]
 
   All of our open positions have been filled. As we bring on new members
-  to the team, we to take time to let the dust settle before continuing.
-  We find that we get a better picture that way of the role(s) that will
-  have the most impact on our velocity.
+  to the team, we take time to let the dust settle before continuing. We
+  find this approach gives us a much better idea of what new position(s)
+  will have the most impact on our velocity.
 
   We'll have more positions opening up soon so we're still keeping track
-  of the pull requests coming in. Some things we'll be interested in, in
-  no particular order: Devops (PaaS), Dart, Python and libs like Pandas,
-  Ruby, experience working in healthcare, compliance or various areas of
-  research, and of course anything related to helping others to improve
-  their mental-health & well-being.
+  of the pull requests coming in. Some of the things we'll be interested
+  in are (in no particular order): Dart, Python, Ruby, PostgreSQL, ORMs,
+  devops (AWS, Linux). Interest or experience in healthcare, psychology,
+  mental-health & well-being, areas like research, statistical analysis,
+  data science, machine learning, and any other interests you have that
+  you'd like to tell us about.
 
   We are an equal opportunity employer. If you're not sure whether your
   skills and experience would be a good fit, please email us anyway and
