@@ -1,29 +1,42 @@
 ## Preamble
 
 ```
-  > re: Message from the editor                             [2021-07-11]
+  > re: Notice from HQ                                      [2021-08-16]
 
-  All of our open positions have been filled. As we bring on new members
-  to the team, we take time to let the dust settle before continuing. We
-  find this approach gives us a much better idea of what new position(s)
-  will have the most impact on our velocity.
+  We are now accepting applications for several new technical positions:
 
-  We'll have more positions opening up soon so we're still keeping track
-  of the pull requests coming in. Some of the things we'll be interested
-  in are (in no particular order): Dart, Python, Ruby, PostgreSQL, ORMs,
-  devops (AWS, Linux). Interest or experience in healthcare, psychology,
-  mental-health & well-being, areas like research, statistical analysis,
-  data science, machine learning, and any other interests you have that
-  you'd like to tell us about.
+        Senior Mobile Development [Flutter|Dart|Native]
+        Quality Assurance Engineer [Elixir|Python|Ruby]
+        Backend Engineer [Python, Devops|AWS|SRE|Ruby]
 
-  We are an equal opportunity employer. If you're not sure whether your
-  skills and experience would be a good fit, please email us anyway and
-  we can figure it out together. At the very least, we'll be pleased to
-  offer you any constructive feedback we can (but only if you ask). 🌻
+  For each of these, experience as team lead or project owner is a bonus
+  but not required (we want programmers, first and foremost). The mobile
+  position is on our mobile team, no surprise, and will help us organize
+  and define the work driven by our roadmap. Daily communication between
+  us and our remote PM is also expected.
 
-  This notice will be updated again as we have more details to share. - QC
+  The QA Engineer will be the first dedicated QA on our team and as such
+  will help us build out our testing program. They will also take on the
+  responsiblity for one or more of the test suites as well (depending on
+  the language or type of testing they're most comfortable with).
+
+  Our Backend Engineer role is a modern take on the old classic. We have
+  a linux-based infrastructure that we built and maintain which requires
+  ongoing care and attention, including scripts and other plumbing. They
+  will help us maintain and automate that infrastructure as well as help
+  us explore options for a more service-based approach.
+
+   We are an equal opportunity employer. If you're not sure whether your
+   skills and experience would be a good fit, please email us anyway and
+   we can figure it out together. At the very least, we'll be pleased to
+   offer you any constructive feedback we can (but only if you ask). 🌻
+
+  We will have more positions opening up towards the end of this year or
+  early next year so if other roles may be a better fit for you, keep an
+  eye out around then. -- QC
 
 ```
+
 ---
 
 
