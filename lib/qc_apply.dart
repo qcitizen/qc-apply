@@ -3,28 +3,28 @@ String? compressStr(String? initialStr) {
 
   if (initialStr == '') return '';
 
-  Map<int, String> chars =
+  Map<int, String> _chars =
       initialStr.replaceAll(RegExp(r'[^a-zA-Z]'), '').split('').asMap();
 
-  String compressedStr = '';
+  String _compressedStr = '';
 
-  int repeatCount = 1;
+  int _repeatCount = 1;
 
-  chars.forEach((idx, e) {
-    if (chars[idx] == chars[idx - 1]) {
-      repeatCount++;
+  _chars.forEach((idx, e) {
+    if (_chars[idx] == _chars[idx - 1]) {
+      _repeatCount++;
     } else {
-      if (repeatCount == 1) {
-        compressedStr += chars[idx].toString();
+      if (_repeatCount == 1) {
+        _compressedStr += _chars[idx].toString();
       } else {
-        compressedStr += repeatCount.toString() + chars[idx].toString();
-        repeatCount = 1;
+        _compressedStr += _repeatCount.toString() + _chars[idx].toString();
+        _repeatCount = 1;
       }
     }
-    if (idx == chars.length - 1 && repeatCount > 1) {
-      compressedStr += repeatCount.toString();
+    if (idx == _chars.length - 1 && _repeatCount > 1) {
+      _compressedStr += _repeatCount.toString();
     }
   });
 
-  return compressedStr;
+  return _compressedStr;
 }
