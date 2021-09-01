@@ -55,12 +55,6 @@ Each item below has an input value and the expected output from the function.
 4. `ccceee12eccceee` → `c3e4c3e3` (numbers removed)
 5. `effeac01cb65c` → `ef2eac2bc`
 
-a3bc4d2
-a5f10c
-abcd
-c3e4c3e3
-ef2eac2bc
-mat2isago2dprogram2er
 
 ## Timeboxing
 
