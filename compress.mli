@@ -5,4 +5,6 @@ val compress : string -> string
    - Consecutive matching characters are compressed to the character and
      the number of times it is repeated. Ex: aaa -> a3
    - Unique characters are retained as-is. Ex: a -> a.
+
+   @raise Invalid_argument("index out of bounds") if the string is empty.
  *)

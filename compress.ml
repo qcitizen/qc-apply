@@ -51,4 +51,4 @@ let generate (lst : pair list) : string =
   lst |> List.rev_map gen_char |> String.concat ""
 
 
-let compress str : string = str |> transform |> generate
+let compress str = str |> transform |> generate
