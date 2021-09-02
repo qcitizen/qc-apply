@@ -2,3 +2,16 @@
 *tmp*
 *.sql
 data/
+
+# OCaml Compile intermediates
+*.cmi
+*.cmx
+*.o
+*.cache
+
+# Compiled binaries
+compress
+test
+
+# vscode stuff
+.vscode/
