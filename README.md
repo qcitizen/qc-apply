@@ -8,10 +8,10 @@ To run this solution,
 1. Install ocaml. The OCaml website maintains [an install page](https://ocaml.org/docs/install.html).
 
 2. No packages are required for the main program itself, however, `OUnit2`
-   is required to run tests. Install OUnit2 with:
+   and `ocamlfind` are required to run tests. Install them with:
 
 ```sh
-opam install ounit2
+opam install ounit2 ocamlfind
 ```
 
 3. Run:
