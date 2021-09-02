@@ -1,3 +1,39 @@
+# Usage
+
+This solution is written in OCaml 4.11, though any OCaml version after 4.05
+should be OK.
+
+To run this solution,
+
+1. Install ocaml. The OCaml website maintains [an install page](https://ocaml.org/docs/install.html).
+
+2. No packages are required for the main program itself, however, `OUnit2`
+   is required to run tests. Install OUnit2 with:
+
+```sh
+opam install ounit2
+```
+
+3. Run:
+
+```sh
+make build
+```
+
+to build the `compress` executable, used as
+
+```sh
+compress <input_string>
+```
+
+4. Run:
+
+```sh
+make test
+```
+
+to run tests.
+
 ## Preamble
 
 ```
@@ -39,11 +75,9 @@
 
 ---
 
-
 # Exercise
 
 Write a function that compresses an alphanumeric string by collapsing consecutive values. The rules of the compression algorithm are defined by the test cases below.
-
 
 ## Test cases
 
@@ -55,28 +89,24 @@ Each item below has an input value and the expected output from the function.
 4. `ccceee12eccceee` → `c3e4c3e3` (numbers removed)
 5. `effeac01cb65c` → `ef2eac2bc`
 
-
 ## Timeboxing
 
 Try to complete this task within 30 minutes.
 
-
 ## What we look for
 
 - Code structure — specifically how readable and understandable it is
-    - (Optional) Consider using of whitespace and inline doc strings for clarity
+  - (Optional) Consider using of whitespace and inline doc strings for clarity
 - Git usage — granularity of commits and any branches or tags
 - Edge cases — how they're handled so they won't be forgotten
-    - (Optional) Describe or implement a solution for each case (if any)
+  - (Optional) Describe or implement a solution for each case (if any)
 - Bonus: Add a very basic test for each case
-
 
 ## What we _don't_ look for
 
 - Language — use whatever programming language you're most comfortable with
 - Number of lines — it can be any length as long as it's readable and understandable
 - Time spent — just be honest and tell us how you used the time
-
 
 ## How to submit
 
