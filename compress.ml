@@ -33,6 +33,16 @@ let transform (str : string) : pair list =
   _transform str 1 [ (str.[0], Single) ]
 
 
-let generate (lst : pair list) : string = ""
+let gen_char ((char, count) : pair) : string =
+  match count with
+  | Single ->
+      String.make 1 char
+  | Multiple n ->
+      String.make 1 char ^ string_of_int n
+
+
+let generate (lst : pair list) : string =
+  lst |> List.rev_map gen_char |> String.concat ""
+
 
 let compress str : string = str |> transform |> generate
