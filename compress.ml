@@ -14,18 +14,24 @@ let cmp (char_1 : char) ((char_2, count) : pair) =
       `NonEq char_1
 
 
+let is_number = function '0' .. '9' -> true | _ -> false
+
 let transform (str : string) : pair list =
   let rec _transform str pos accum =
     if pos = String.length str
     then accum
     else
+      let char = str.[pos] in
       let new_accum =
-        match cmp str.[pos] (List.hd accum) with
-        | `Eq (char, count) ->
-            let new_head = (char, inc count) in
-            new_head :: List.tl accum
-        | `NonEq char ->
-            (char, Single) :: accum
+        if is_number char
+        then accum
+        else
+          match cmp char (List.hd accum) with
+          | `Eq (char, count) ->
+              let new_head = (char, inc count) in
+              new_head :: List.tl accum
+          | `NonEq char ->
+              (char, Single) :: accum
       in
       _transform str (pos + 1) new_accum
   in
