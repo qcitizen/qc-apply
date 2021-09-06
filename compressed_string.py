@@ -31,6 +31,6 @@ def compress_string(string: str) -> str:
 
     return compressed_string
 
-
+# The time complexity of this algorithm is big O of n while the space complexity is also big O of n.
 
 
