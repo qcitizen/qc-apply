@@ -1,7 +1,10 @@
+// To run copy & paste the complete file to https://dartpad.dev and run.
+// to see the result look for consloe in the bottom left corner.
+
 import 'package:flutter/material.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  
 
  String textCompressingAlgo(String inputString01) {
 
@@ -70,11 +73,26 @@ void main() {
 
   }
 
-  
-
   //   Change the text to inside textChangingAlgo and see the results in console.
   String _convertedText = textCompressingAlgo('aaabcCDcdd00');
   print('CompressedString');
   print(_convertedText);
   print(' ');
+
+  //unit tests for different types start here.
+  // For Example 01
+  test('Test for case 01', () {
+    String _toConvertString = 'aaabccccdd';
+    String _correctOutput = textCompressingAlgo(_toConvertString);
+
+    expect(_correctOutput, 'a3bc4d2');
+  });
+  
+  // For example 04
+  test('Test for case 04 - remove numbers', () {
+    String _toConvertString = 'ccceee12eccceee';
+    String _correctOutput = textCompressingAlgo(_toConvertString);
+
+    expect(_correctOutput, 'c3e4c3e3');
+  });
 }
