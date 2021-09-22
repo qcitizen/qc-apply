@@ -5,7 +5,6 @@
 
   We are now accepting applications for several new technical positions:
 
-        Senior Mobile Development [Flutter|Dart|Native]
         Quality Assurance Engineer [Elixir|Python|Ruby]
         Backend Engineer [Python, Devops|AWS|SRE|Ruby]
 
