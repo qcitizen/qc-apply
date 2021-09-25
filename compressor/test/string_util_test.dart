@@ -10,4 +10,8 @@ void main() {
     expect(compressAlphaNumeric('abc'), equals('abc'));
   });
 
+  test('removes numbers', () {
+    expect(compressAlphaNumeric('a43b1c30'), equals('abc'));
+  });
+
 }
