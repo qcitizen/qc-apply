@@ -1,6 +1,6 @@
 # String Compressor
 
-A utility that compresses an alphanumeric string by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers.
+A utility that compresses an alphanumeric string by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers or any character that is not part of the latin alphabet.
 
 The rules of the compression algorithm are defined by the test cases below.
 
@@ -65,7 +65,7 @@ Space - O(n)
 
 This exercise took roughly 1 hr and 15 min. for me to complete.  In the future I might improve on the time with the following adjustments :
 
-1.  Walk through the steps of the method I come up with a few samples before writing the implementation.
+1.  Walk through the steps of the propose method with a few samples before writing the implementation.
 
 2.  Create some boiler plate for starting a project with a simple function and 'test' dir already set up.
 
@@ -77,11 +77,3 @@ This exercise took roughly 1 hr and 15 min. for me to complete.  In the future I
 
 4.  Limit distractions.
 
-
-## How to submit
-
-1. Fork this repo to a public one on your account.
-2. Add an empty file for your code and make a commit.
-3. Make granular commits as you go so that each one is readible with an accurate commit message.
-4. When you're done, submit your fork as a pull request back to this repo.
-5. To help us stay organized, please email us at careers@quantifiedcitizen.com with the link and a few details about your experience and/or interest in working with us.
