@@ -6,4 +6,8 @@ void main() {
     expect(compressAlphaNumeric(''), equals(''));
   });
 
+  test('accepts a string of letters without consecutive values and returns back the same string', () {
+    expect(compressAlphaNumeric('abc'), equals('abc'));
+  });
+
 }

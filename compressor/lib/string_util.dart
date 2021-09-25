@@ -5,5 +5,5 @@
  * Output : String - the compressed string with numbers representing how many adjacent consecutive characters there are
  */
 String compressAlphaNumeric(String input) {
-  return '';
+  return input;
 }
