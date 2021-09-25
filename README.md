@@ -1,47 +1,9 @@
-## Preamble
+# String Compressor
 
-```
-  > re: Notice from HQ                                      [2021-08-16]
-
-  We are now accepting applications for several new technical positions:
-
-        Quality Assurance Engineer [Elixir|Python|Ruby]
-        Backend Engineer [Python, Devops|AWS|SRE|Ruby]
-
-  For each of these, experience as team lead or project owner is a bonus
-  but not required (we want programmers, first and foremost). The mobile
-  position is on our mobile team, no surprise, and will help us organize
-  and define the work driven by our roadmap. Daily communication between
-  us and our remote PM is also expected.
-
-  The QA Engineer will be the first dedicated QA on our team and as such
-  will help us build out our testing program. They will also take on the
-  responsiblity for one or more of the test suites as well (depending on
-  the language or type of testing they're most comfortable with).
-
-  Our Backend Engineer role is a modern take on the old classic. We have
-  a linux-based infrastructure that we built and maintain which requires
-  ongoing care and attention, including scripts and other plumbing. They
-  will help us maintain and automate that infrastructure as well as help
-  us explore options for a more service-based approach.
-
-   We are an equal opportunity employer. If you're not sure whether your
-   skills and experience would be a good fit, please email us anyway and
-   we can figure it out together. At the very least, we'll be pleased to
-   offer you any constructive feedback we can (but only if you ask). 🌻
-
-  We will have more positions opening up towards the end of this year or
-  early next year so if other roles may be a better fit for you, keep an
-  eye out around then. -- QC
-
-```
-
----
+A utility that compresses an alphanumeric string by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers.
 
 
-# Exercise
-
-Write a function that compresses an alphanumeric string by collapsing consecutive values. The rules of the compression algorithm are defined by the test cases below.
+The rules of the compression algorithm are defined by the test cases below.
 
 
 ## Test cases
@@ -54,6 +16,11 @@ Each item below has an input value and the expected output from the function.
 4. `ccceee12eccceee` → `c3e4c3e3` (numbers removed)
 5. `effeac01cb65c` → `ef2eac2bc`
 
+## Testing
+
+  ```
+    $ cd compressor; dart test
+  ```
 
 ## Timeboxing
 
