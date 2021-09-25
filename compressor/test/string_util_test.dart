@@ -7,11 +7,16 @@ void main() {
   });
 
   test('accepts a string of letters without consecutive values and returns back the same string', () {
-    expect(compressAlphaNumeric('abc'), equals('abc'));
+    expect(compressAlphaNumeric('abcd'), equals('abcd'));
   });
 
   test('removes numbers', () {
     expect(compressAlphaNumeric('a43b1c30'), equals('abc'));
+  });
+
+  test('replaces consecutive characters with a single character and a count', () {
+    expect(compressAlphaNumeric('aaabccccdd'), equals('a3bc4d2'));
+    expect(compressAlphaNumeric('aaaaaffffffffffc'), equals('a5f10c'));
   });
 
 }
