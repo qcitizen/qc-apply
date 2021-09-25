@@ -18,7 +18,7 @@ String compressAlphabetic(String input) {
 
   // appends current char to result
   void doAppend() {
-      result += previousChar;
+      result += previousChar;  // Assuming string concat is amortized to O(1)
       if(consecutiveCharCount > 1) {
         result += consecutiveCharCount.toString();
       }
