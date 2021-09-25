@@ -19,4 +19,10 @@ void main() {
     expect(compressAlphaNumeric('aaaaaffffffffffc'), equals('a5f10c'));
   });
 
+  test('does both removes numbers and replaces chars', () {
+    expect(compressAlphaNumeric('ccceee12eccceee'), equals('c3e4c3e3'));
+    expect(compressAlphaNumeric('effeac01cb65c'), equals('ef2eac2bc'));
+
+  });
+
 }

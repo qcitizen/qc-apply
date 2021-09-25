@@ -33,7 +33,6 @@ String compressAlphaNumeric(String input) {
 
   doAppend();
 
-
   return result;
 
 }
