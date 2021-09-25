@@ -2,9 +2,7 @@
 
 A utility that compresses an alphanumeric string by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers.
 
-
 The rules of the compression algorithm are defined by the test cases below.
-
 
 ## Test cases
 
@@ -24,23 +22,29 @@ Each item below has an input value and the expected output from the function.
 
 ## Assumptions
 
-1.  Remove any non alphanumeric character.
+1.  Since the exercise description mentioned that the method should take alphanumeric characters and remove numbers, assume other symbols and other non alphabetic characters should also be removed.
 
 ## Algo Description
 
-1.  Remove all numbers
-  a. Use a regex to match numbers and replace them with an empty string
+1.  Remove all non alphabetic characters.
+  a. Use a regex to match non alphabetic characters and replace them with an empty string.
 
 2.  Collapse consecutive characters
+
   a. Initialize some temp variables
     i ) Create an empty list that will be the final result
     ii ) A count for consecutive characters (equals 1)
     iii ) A string for the current character (equals first char in 'input')
+    iv ) the current index to compare
+
   b. starting with the second character compare it with the current character
-  c. if it is the same then increment the count and go to the next
-  d. if it is different then append the current character to the result,
-     append the count if is greater than 1,
-     reset the count to 1 and current character
+    i ) if it is the same then increment the count and go to the next
+
+    ii ) if it is different then append the current character to the result,
+        append the count if is greater than 1,
+        reset the count to 1,
+        and set current character to the next character since it was not a match
+
   e. stop once the end of the string is reached
 
 ### Compexity
@@ -59,24 +63,19 @@ Space - O(n)
 
 ## Timeboxing
 
-Try to complete this task within 30 minutes.
+This exercise took roughly 1 hr and 15 min. for me to complete.  In the future I might improve on the time with the following adjustments :
 
+1.  Walk through the steps of the method I come up with a few samples before writing the implementation.
 
-## What we look for
+2.  Create some boiler plate for starting a project with a simple function and 'test' dir already set up.
 
-- Code structure — specifically how readable and understandable it is
-    - (Optional) Consider using of whitespace and inline doc strings for clarity
-- Git usage — granularity of commits and any branches or tags
-- Edge cases — how they're handled so they won't be forgotten
-    - (Optional) Describe or implement a solution for each case (if any)
-- Bonus: Add a very basic test for each case
+3.  Limit scope.
 
+  * use simple assert instead of 'dart test'
 
-## What we _don't_ look for
+  * reduce documentation
 
-- Language — use whatever programming language you're most comfortable with
-- Number of lines — it can be any length as long as it's readable and understandable
-- Time spent — just be honest and tell us how you used the time
+4.  Limit distractions.
 
 
 ## How to submit
