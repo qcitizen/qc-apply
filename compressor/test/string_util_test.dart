@@ -28,4 +28,8 @@ void main() {
     expect(compressAlpha('c{cceee12eccceee'), equals('c3e4c3e3'));
   });
 
+  test('does not match on case', () {
+    expect(compressAlpha('aAbbc'), equals('aAb2c'));
+  });
+
 }
