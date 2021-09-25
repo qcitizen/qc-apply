@@ -44,6 +44,14 @@ Each item below has an input value and the expected output from the function.
 Time - O(n)
 Space - O(n)
 
+## Edge Cases
+
+  * handles empty strings
+
+  * handles non alphanumeric characters
+
+  * does not accept null as dart is running with null safety
+
 
 ## Timeboxing
 
