@@ -4,7 +4,7 @@
  * Input : String (input) - an alphanumeric string
  * Output : String - the compressed string with numbers representing how many adjacent consecutive characters there are
  */
-String compressAlphaNumeric(String input) {
+String compressAlpha(String input) {
   if(input.length==0) return input;
 
   input = input.replaceAll(RegExp(r'[^a-zA-Z]*'), '');
