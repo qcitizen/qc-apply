@@ -22,6 +22,29 @@ Each item below has an input value and the expected output from the function.
     $ cd compressor; dart test
   ```
 
+## Algo Description
+
+1.  Remove all numbers
+  a. Use a regex to match numbers and replace them with an empty string
+
+2.  Collapse consecutive characters
+  a. Initialize some temp variables
+    i ) Create an empty list that will be the final result
+    ii ) A count for consecutive characters (equals 1)
+    iii ) A string for the current character (equals first char in 'input')
+  b. starting with the second character compare it with the current character
+  c. if it is the same then increment the count and go to the next
+  d. if it is different then append the current character to the result,
+     append the count if is greater than 1,
+     reset the count to 1 and current character
+  e. stop once the end of the string is reached
+
+### Compexity
+
+Time - O(n)
+Space - O(n)
+
+
 ## Timeboxing
 
 Try to complete this task within 30 minutes.
