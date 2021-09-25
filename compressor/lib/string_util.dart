@@ -1,11 +1,11 @@
 /*
  * Author: Aaron Surty
- * A utility that compresses a string of letters from the alphabet (upper or lower case) by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers.
- * Input : String (input) - an alphanumeric string
+ * A utility that compresses a string of letters from the alphabet (upper or lower case) by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of non alphabetic characters.
+ * Input : String (input) - a string of upper/lower case characters from the alphabet.
  * Output : String - the compressed string with numbers representing how many adjacent consecutive characters there are
  * The string is treated as case sensitve (ie/ input aAbb output aAb2 )
  */
-String compressAlpha(String input) {
+String compressAlphabetic(String input) {
   if(input.length==0) return input;
 
   input = input.replaceAll(RegExp(r'[^a-zA-Z]*'), '');
