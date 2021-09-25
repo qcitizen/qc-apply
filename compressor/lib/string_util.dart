@@ -1,13 +1,14 @@
 /*
  * Author: Aaron Surty
- * A utility that compresses an alphanumeric string by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers.
+ * A utility that compresses a string of letters from the alphabet (upper or lower case) by collapsing consecutive characters.  The result of a compress/decompress would result in the loss of numbers.
  * Input : String (input) - an alphanumeric string
  * Output : String - the compressed string with numbers representing how many adjacent consecutive characters there are
  */
 String compressAlphaNumeric(String input) {
   if(input.length==0) return input;
 
-  input = input.replaceAll(RegExp(r'[0-9]*'), '');
+  input = input.replaceAll(RegExp(r'[^a-zA-Z]*'), '');
+
   String result = '';
   String previousChar = input[0];
   int consecutiveCharCount = 1;

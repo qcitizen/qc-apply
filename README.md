@@ -22,6 +22,10 @@ Each item below has an input value and the expected output from the function.
     $ cd compressor; dart test
   ```
 
+## Assumptions
+
+1.  Remove any non alphanumeric character.
+
 ## Algo Description
 
 1.  Remove all numbers
