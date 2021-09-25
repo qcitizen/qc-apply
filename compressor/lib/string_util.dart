@@ -10,11 +10,13 @@ String compressAlpha(String input) {
 
   input = input.replaceAll(RegExp(r'[^a-zA-Z]*'), '');
 
+  // init working vars
   String result = '';
   String previousChar = input[0];
   int consecutiveCharCount = 1;
   int currentIndex = 1;
 
+  // appends current char to result
   void doAppend() {
       result += previousChar;
       if(consecutiveCharCount > 1) {
@@ -22,6 +24,7 @@ String compressAlpha(String input) {
       }
   }
 
+  // iterates over each next char
   while(currentIndex < input.length) {
     if(previousChar!=input[currentIndex]) {
       doAppend();
@@ -33,6 +36,7 @@ String compressAlpha(String input) {
     currentIndex++;
   }
 
+  // calls append one last time to handle last char
   doAppend();
 
   return result;
