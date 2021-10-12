@@ -3,8 +3,14 @@ import java.lang.Object;
 
 public class Main
 {
-    public static void main(String[] args) { 
+    public static void main(String[] args) {
+        System.out.println(compressAlphanumericString("aaabccccdd")); 
+        System.out.println(compressAlphanumericString("aaaaaffffffffffc")); 
+        System.out.println(compressAlphanumericString("abcd")); 
+        System.out.println(compressAlphanumericString("ccceee12eccceee")); 
         System.out.println(compressAlphanumericString("effeac01cb65c")); 
+        System.out.println(compressAlphanumericString("12345IAmABoy12345"));
+        System.out.println(compressAlphanumericString("")); 
     }
 
     private static String compressAlphanumericString(String str) {
@@ -23,6 +29,10 @@ public class Main
         LinkedHashMap<Character, Integer> map
                 = new LinkedHashMap<Character, Integer>();
         
+        // Handle a case where the input is empty        
+        if (st.isEmpty()) {
+             System.out.println("empty");
+         }
         for (int index = 0; index < st.length(); index++){
             char ch = st.charAt(index);
             // if the character already exists in map
