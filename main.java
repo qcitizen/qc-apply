@@ -3,8 +3,7 @@ import java.lang.Object;
 
 public class Main
 {
-    public static void main(String[] args) {
- 
+    public static void main(String[] args) { 
         System.out.println(compressAlphanumericString("effeac01cb65c")); 
     }
 
@@ -24,19 +23,22 @@ public class Main
         LinkedHashMap<Character, Integer> map
                 = new LinkedHashMap<Character, Integer>();
         
-        // Handle a case where the input is empty        
-        if (st.isEmpty()) {
-             System.out.println("empty");
-         }
         for (int index = 0; index < st.length(); index++){
             char ch = st.charAt(index);
+            // if the character already exists in map
             if (map.containsKey(ch)) {
+                // Increment a given key's value by 1
                 map.put(ch, map.get(ch) + 1);
-            }
-            else {
+            } else {
+                // Add a new key as a character and set value to 1
                 map.put(ch, 1);
+                
+                // Retrieve map's first key
                 char firstKey = map.keySet().iterator().next();
+                
+                // Retrieve map's first value
                 int firstValue = map.values().iterator().next();
+                
                 if (map.size() > 1) {
                     if (firstValue > 1) {
                         result.append(firstKey);
@@ -49,6 +51,13 @@ public class Main
                 }
             }
         }
+        
+        // Add remainder element from map to result string 
+        if (map.size() > 0) {
+            result.append(map.keySet().iterator().next());      
+            if (map.values().iterator().next() > 1) {
+                result.append(map.values().iterator().next());      
+            }
+        }
         return result.toString();
     }
-}
