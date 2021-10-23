@@ -1,38 +1,47 @@
 ## Preamble
 
 ```
-  > re: Notice from HQ                                      [2021-08-16]
+  > re: Notice from HQ                                      [2021-10-25]
 
   We are now accepting applications for several new technical positions:
 
-        Quality Assurance Engineer [Elixir|Python|Ruby]
-        Backend Engineer [Python, Devops|AWS|SRE|Ruby]
+    Development Lead, Mobile
+      Location: Remote (PST or EST preferred)
+        Skills: Flutter+Dart or Native; written-communication
 
-  For each of these, experience as team lead or project owner is a bonus
-  but not required (we want programmers, first and foremost). The mobile
-  position is on our mobile team, no surprise, and will help us organize
-  and define the work driven by our roadmap. Daily communication between
-  us and our remote PM is also expected.
+    Modern-day Sysadmin (i.e. devops without the 24/7 on-call)
+      Location: Remote (PST or EST preferred)
+        Skills: AWS+Docker+*nix+Python; dev-process, monitoring, logging
 
-  The QA Engineer will be the first dedicated QA on our team and as such
-  will help us build out our testing program. They will also take on the
-  responsiblity for one or more of the test suites as well (depending on
-  the language or type of testing they're most comfortable with).
-
-  Our Backend Engineer role is a modern take on the old classic. We have
-  a linux-based infrastructure that we built and maintain which requires
-  ongoing care and attention, including scripts and other plumbing. They
-  will help us maintain and automate that infrastructure as well as help
-  us explore options for a more service-based approach.
+  Telling us about your experience as a senior, lead or project owner on
+  a team is a bonus but not required (we tend to hire programmers, first
+  & foremost; we're all active programmers ourselves). Mastery is also a
+  valued asset which again is not a requirement but it is a way to stand
+  out.
 
    We are an equal opportunity employer. If you're not sure whether your
    skills and experience would be a good fit, please email us anyway and
    we can figure it out together. At the very least, we'll be pleased to
-   offer you any constructive feedback we can (but only if you ask). 🌻
+   offer you any constructive feedback we can (but only if you ask). 🥗
 
-  We will have more positions opening up towards the end of this year or
-  early next year so if other roles may be a better fit for you, keep an
-  eye out around then. -- QC
+  We will have more positions opening up in 2022, for both technical and
+  non-technical roles so you have a couple options to consider, you can:
+
+      1. Watch or star this repo or otherwise keep your eye on this page
+          for a technical position that might be a better fit for you.
+      2. Or you could fork this repo and submit a PR anyway; then [let us
+          know by email](mailto:careers@quantifiedcitizen.com) what your
+          favourite salad is and why you'd want
+          to work with us.
+      3. Or finally, simply let the fates of old take the wheel and what
+          what will be will be. 🤔
+
+  But don't be limited by just that list; there are so many options and
+  other lists and opportunies available. Sometimes they're things that
+  you'd never even thought out before. If you do go that route, and
+  you do decide to apply later on we'll be very interested to hear
+  what you've been up to! (We're interested in what candidates
+  tell us about themselves and their experience regardless!)
 
 ```
 
