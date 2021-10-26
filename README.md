@@ -25,24 +25,8 @@
    offer you any constructive feedback we can (but only if you ask). 🥗
 
   We will have more positions opening up in 2022, for both technical and
-  non-technical roles so you have a couple options to consider, you can:
-
-      1. Watch or star this repo or otherwise keep your eye on this page
-          for a technical position that might be a better fit for you.
-      2. Or you could fork this repo and submit a PR anyway; then [let us
-          know by email](mailto:careers@quantifiedcitizen.com) what your
-          favourite salad is and why you'd want
-          to work with us.
-      3. Or finally, simply let the fates of old take the wheel and what
-          what will be will be. 🤔
-
-  But don't be limited by just that list; there are so many options and
-  other lists and opportunies available. Sometimes they're things that
-  you'd never even thought out before. If you do go that route, and
-  you do decide to apply later on we'll be very interested to hear
-  what you've been up to! (We're interested in what candidates
-  tell us about themselves and their experience regardless!)
-
+  non-technical roles. We keep this repo updated with the latest so keep
+  an eye out here if you're interested.
 ```
 
 ---
