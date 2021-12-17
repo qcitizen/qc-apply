@@ -1,23 +1,21 @@
 ## Preamble
 
 ```
-  > re: Notice from HQ                                      [2021-10-25]
+  > re: Notice from HQ                                      [2021-12-16]
 
-  We are now accepting applications for several new technical positions:
+  We are now accepting applications for a couple new tech positions:
 
-    Development Lead, Mobile
+    Mobile Dev, Lead (Dart+Flutter, REST API, ResearchKit)
       Location: Remote (PST or EST preferred)
-        Skills: Flutter+Dart or Native; written-communication
+        Skills: Mobile-first mentality, with experience designing APIs
+           Ask: Tell us about a recent success you've acheived
+                as part of a small team.
 
-    Modern-day Sysadmin (i.e. devops without the 24/7 on-call)
+    Backend Engineer (Python, Docker Compose, AWS)
       Location: Remote (PST or EST preferred)
-        Skills: AWS+Docker+*nix+Python; dev-process, monitoring, logging
-
-  Telling us about your experience as a senior, lead or project owner on
-  a team is a bonus but not required (we tend to hire programmers, first
-  & foremost; we're all active programmers ourselves). Mastery is also a
-  valued asset which again is not a requirement but it is a way to stand
-  out.
+        Skills: Production-minded engineer that can carry a project.
+           Ask: Tell us about a complex problem you've solved with code,
+                systems thinking or elbow grease.
 
    We are an equal opportunity employer. If you're not sure whether your
    skills and experience would be a good fit, please email us anyway and
@@ -25,8 +23,8 @@
    offer you any constructive feedback we can (but only if you ask). 🥗
 
   We will have more positions opening up in 2022, for both technical and
-  non-technical roles. We keep this repo updated with the latest so keep
-  an eye out here if you're interested.
+  non-technical roles. We keep this repo updated with the latest details
+  so keep an eye out here if you're interested.
 ```
 
 ---
