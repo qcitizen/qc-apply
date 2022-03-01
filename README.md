@@ -1,7 +1,7 @@
 ## Preamble
 
 ```
-  > re: Notice from HQ                                      [2021-12-16]
+  > re: Notice from HQ                                       [2022-03-01]
 
   We are now accepting applications for a couple new tech positions:
 
@@ -22,7 +22,7 @@
    we can figure it out together. At the very least, we'll be pleased to
    offer you any constructive feedback we can (but only if you ask). 🥗
 
-  We will have more positions opening up in 2022, for both technical and
+  We have more positions opening up later in 2022 for both technical and
   non-technical roles. We keep this repo updated with the latest details
   so keep an eye out here if you're interested.
 ```
