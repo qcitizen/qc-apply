@@ -15,3 +15,11 @@ def encode(string):
         previous_index += 1
 
     return "".join(compressed_string)
+
+
+def append_character(length, character, encoded_string):
+    if length == 1:
+        encoded_string.append(character)
+    else:
+        encoded_string.append(character)
+        encoded_string.append(str(length))
