@@ -36,3 +36,12 @@ def append_character(length, character, encoded_string):
 
 def test_encode(string, result):
     assert encode(string) == result
+
+
+test_encode("aaabccccdd", "a3bc4d2")
+test_encode("aaaaaffffffffffc", "a5f10c")
+test_encode("abcd", "abcd")
+test_encode("ccceee12eccceee", "c3e4c3e3")
+test_encode("effeac01cb65c", "effeac01cb65c")
+test_encode("", "")
+test_encode("  ", "  ")
