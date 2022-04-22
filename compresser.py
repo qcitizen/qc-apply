@@ -3,7 +3,6 @@ def encode(string):
     current_length = 1
     previous_index = 0
     jump = 1
-    reset_jump = False
 
     for i in range(1, len(string)):
         current_char = string[i]
