@@ -32,3 +32,7 @@ def append_character(length, character, encoded_string):
     else:
         encoded_string.append(character)
         encoded_string.append(str(length))
+
+
+def test_encode(string, result):
+    assert encode(string) == result
