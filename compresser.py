@@ -23,6 +23,7 @@ def encode(string):
         if reset_jump:
             jump = 1
 
+    append_character(current_length, string[len(string) - 1], compressed_string)
     return "".join(compressed_string)
 
 
