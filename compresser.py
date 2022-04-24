@@ -1,4 +1,8 @@
 def encode(string):
+    # handle empty string
+    if not string:
+        return ""
+
     compressed_string = []
     current_length = 1
     previous_index = 0
@@ -27,6 +31,8 @@ def encode(string):
 
 
 def append_character(length, character, encoded_string):
+    if character == " ":
+        return
     if length == 1:
         encoded_string.append(character)
     else:
@@ -42,6 +48,6 @@ test_encode("aaabccccdd", "a3bc4d2")
 test_encode("aaaaaffffffffffc", "a5f10c")
 test_encode("abcd", "abcd")
 test_encode("ccceee12eccceee", "c3e4c3e3")
-test_encode("effeac01cb65c", "effeac01cb65c")
+test_encode("effeac01cb65c", "ef2eac2bc")
 test_encode("", "")
-test_encode("  ", "  ")
+test_encode("    ", "")
