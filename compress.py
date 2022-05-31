@@ -13,26 +13,37 @@ parser = argparse.ArgumentParser(
 
 input_group = parser.add_mutually_exclusive_group()
 
+parser.add_argument(
+    '-l', '--lower-case',
+    action='store_false',
+    default=True,
+    dest='case_flag',
+    help="compression is NOT case-sensitive."
+)
+
 input_group.add_argument(
     '-s',
     dest='target_string',
-    help="Read string from stdin."
+    nargs='+',
+    help="read string from stdin."
 )
 
 input_group.add_argument(
     '-i', '--infile',
     dest='infile',
-    help="Path to input file."
+    help="path to input file."
 )
 
 parser.add_argument(
     '-o', '--outfile',
     dest='outfile',
-    help="Path to output file."
+    help="path to output file."
 )
 
 
-def compress(target_string):
+def compress(target_string, case_flag):
+    if not case_flag:
+        target_string = target_string.lower()
     compressed_string = ''
     g = re.finditer(r'([a-zA-Z])(\1*)', target_string)
     for m in g:
@@ -46,6 +57,7 @@ def compress(target_string):
 
 
 def main(args):
+    case_flag = args.case_flag
     output_data = []
     if args.infile:
         file_path = Path(args.infile)
@@ -53,9 +65,10 @@ def main(args):
             input_data = f.readlines()
 
         for line in input_data:
-            output_data.append(compress(line))
+            output_data.append(compress(line, case_flag))
     else:
-        output_data.append(compress(args.target_string))
+        for target_string in args.target_string:
+            output_data.append(compress(target_string, case_flag))
 
     if args.outfile:
         file_path = Path(args.outfile)
