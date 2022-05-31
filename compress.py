@@ -36,7 +36,11 @@ def compress(target_string):
     compressed_string = ''
     g = re.finditer(r'([a-zA-Z])(\1*)', target_string)
     for m in g:
-        compressed_string += f"{m.group()[:1]}{len(m.group())}"
+        group_len = len(m.group())
+        if group_len > 1:
+            compressed_string += f"{m.group()[:1]}{group_len}"
+        else:
+            compressed_string += f"{m.group()[:1]}"
 
     return compressed_string
 
