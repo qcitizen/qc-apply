@@ -42,6 +42,7 @@ parser.add_argument(
 
 
 def compress(target_string, case_flag):
+    target_string = re.sub(r'[0-9]+', '', target_string)
     if not case_flag:
         target_string = target_string.lower()
     compressed_string = ''
