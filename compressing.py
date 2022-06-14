@@ -23,8 +23,38 @@ def _test():
         assert output == expected_output, msg
 
 
+def _find_first_letter(string):
+    for char in string:
+        if char.isalpha():
+            return char
+
+
 def compress(input_str):
-    ...
+    if not isinstance(input_str, str):
+        return
+
+    if not (cur_char := _find_first_letter(input_str)):
+        return ''  # no letters in input
+
+    output = ''
+    counter = 1
+
+    for char in input_str[1:]:
+        if not char.isalpha():
+            continue
+
+        if counter == 1:
+            output += char
+
+        if char == cur_char:
+            counter += 1
+        else:
+            cur_char = char
+            if counter > 1:
+                output += str(counter)
+                counter = 1
+
+    return output
 
 
 if __name__ == '__main__':
