@@ -36,15 +36,12 @@ def compress(input_str):
     if not (cur_char := _find_first_letter(input_str)):
         return ''  # no letters in input
 
-    output = ''
+    output = cur_char
     counter = 1
 
     for char in input_str[1:]:
         if not char.isalpha():
             continue
-
-        if counter == 1:
-            output += char
 
         if char == cur_char:
             counter += 1
@@ -53,6 +50,10 @@ def compress(input_str):
             if counter > 1:
                 output += str(counter)
                 counter = 1
+            output += char
+
+    if counter > 1:
+        output += str(counter)
 
     return output
 
@@ -60,3 +61,4 @@ def compress(input_str):
 if __name__ == '__main__':
     logger.info('Run tests')
     _test()
+    logger.info('Tests ok')
