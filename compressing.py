@@ -1,6 +1,10 @@
+"""
+Compression module, provides compress() function
+"""
 import logging
 
 
+# Setup logging
 logging.basicConfig(
     format=f'%(asctime)s %(levelname)s: %(message)s',
     level=logging.INFO,
@@ -10,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 def _test():
+    """Test compress() function"""
     expected = {
         'aaabccccdd': 'a3bc4d2',
         'aaaaaffffffffffc': 'a5f10c',
@@ -30,11 +35,14 @@ def _find_first_letter(string):
 
 
 def compress(input_str):
+    """
+    Compress input string into smaller one
+    """
     if not isinstance(input_str, str):
-        return
+        return  # return None as a marker that input is not a string
 
     if not (cur_char := _find_first_letter(input_str)):
-        return ''  # no letters in input
+        return ''  # return '' if no letters in input
 
     output = cur_char
     counter = 1
