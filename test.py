@@ -2,20 +2,40 @@ from main import compress
 
 
 def test_compress():
-    result = compress('aaabccccdd')
-    assert result == 'a3bc4d2'
+    actual = compress('aaabccccdd')
+    expected = 'a3bc4d2'
+    try:
+        assert actual == expected
+    except AssertionError as error:
+        print(f'Error: expected {expected} but actual was {actual}')
 
-    result = compress('aaaaaffffffffffc')
-    assert result == 'a5f10c'
+    actual = compress('aaaaaffffffffffc')
+    expected = 'a5f10c'
+    try:
+        assert actual == expected
+    except AssertionError as error:
+        print(f'Error: expected {expected} but actual was {actual}')
 
-    result = compress('abcd')
-    assert result == 'abcd'
+    actual = compress('abcd')
+    expected = 'abcd'
+    try:
+        assert actual == expected
+    except AssertionError as error:
+        print(f'Error: expected {expected} but actual was {actual}')
 
-    result = compress('ccceee12eccceee')
-    assert result == ('c3e4c3e3')
+    actual = compress('ccceee12eccceee')
+    expected = 'c3e4c3e3'
+    try:
+        assert actual == expected
+    except AssertionError as error:
+        print(f'Error: expected {expected} but actual was {actual}')
 
-    result = compress('effeac01cb65c')
-    assert result == 'ef2eac2bc'
+    actual = compress('effeac01cb65c')
+    expected = 'ef2eac2bc'
+    try:
+        assert actual == expected
+    except AssertionError as error:
+        print(f'Error: expected {expected} but actual was {actual}')
 
 
 if __name__ == '__main__':
