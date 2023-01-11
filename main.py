@@ -2,6 +2,15 @@ from collections import defaultdict
 
 
 def formatted_letter(letter: str, count: int) -> str:
+    """Format a letter with the given count if greater than 1 or else return that letter.
+
+    Args:
+        letter (str): the letter to be formatted
+        count (int): the letter count
+
+    Returns:
+        str: the formatted letter
+    """
     return f'{letter}{count}' if count > 1 else letter
 
 
