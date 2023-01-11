@@ -18,11 +18,13 @@ def compress(message: str) -> str:
     letter_counts = defaultdict(int)
     letter_order = ""
     for letter in message:
-        if not letter.isdigit():
-            letter_counts[letter] += 1
+        if letter.isdigit():
+            continue
 
-            if letter not in letter_order:
-                letter_order += letter
+        letter_counts[letter] += 1
+
+        if letter not in letter_order:
+            letter_order += letter
 
     compressed_message = ""
     for letter in letter_order:
