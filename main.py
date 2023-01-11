@@ -32,18 +32,23 @@ def compress(message: str) -> str:
     previous_letter = None
     compressed_message = ""
     for letter in message:
+        # ignore digits
         if letter.isdigit():
             continue
 
+        # check if the letter is beginning a new sequence
+        # remove current count for potential new sequence
         is_new_letter_sequence = previous_letter and previous_letter != letter
         if is_new_letter_sequence:
             current_letter_count = letter_counts.get(previous_letter)
             compressed_message += formatted_letter(previous_letter, current_letter_count)
             del letter_counts[previous_letter]
 
+        # update the letter count and update previous_letter pointer
         letter_counts[letter] += 1
         previous_letter = letter
 
+    # taking account for last letter sequence
     last_letter_count = letter_counts.get(letter)
     compressed_message += formatted_letter(previous_letter, last_letter_count)
 
