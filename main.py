@@ -26,11 +26,10 @@ def compress(message: str) -> str:
 
     compressed_message = ""
     for letter in letter_order:
-        letter_count = letter_counts.get(letter)
+        if letter_count := letter_counts.get(letter):
+            compressed_message += f'{letter}{letter_count}' if letter_count > 1 else letter
 
-        if not letter_count:
+        else:
             raise ValueError('Invalid letter')
-
-        compressed_message += f'{letter}{letter_count}' if letter_count > 1 else letter
 
     return compressed_message
