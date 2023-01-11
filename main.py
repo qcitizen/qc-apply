@@ -26,11 +26,8 @@ def compress(message: str) -> str:
             current_letter_count = letter_counts.get(previous_letter, 0)
             compressed_message += f'{previous_letter}{current_letter_count}' if current_letter_count > 1 else previous_letter
             del letter_counts[previous_letter]
-            letter_counts[letter] += 1
-        else:
-            # previous_letter is equivalent to letter
-            letter_counts[letter] += 1
 
+        letter_counts[letter] += 1
         previous_letter = letter
 
     compressed_message += f'{previous_letter}{letter_counts.get(letter)}' if letter_counts.get(letter) > 1 else previous_letter
