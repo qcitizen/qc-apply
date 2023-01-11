@@ -35,7 +35,8 @@ def compress(message: str) -> str:
         if letter.isdigit():
             continue
 
-        if previous_letter and previous_letter != letter:
+        is_new_letter_sequence = previous_letter and previous_letter != letter
+        if is_new_letter_sequence:
             current_letter_count = letter_counts.get(previous_letter, 0)
             compressed_message += formatted_letter(previous_letter, current_letter_count)
             del letter_counts[previous_letter]
