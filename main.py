@@ -26,7 +26,7 @@ def compress(message: str) -> str:
 
     compressed_message = ""
     for letter in letter_order:
-        letter_count += letter_counts.get(letter)
+        letter_count = letter_counts.get(letter)
 
         if not letter_count:
             raise ValueError('Invalid letter')
