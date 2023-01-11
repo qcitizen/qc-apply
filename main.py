@@ -1,6 +1,10 @@
 from collections import defaultdict
 
 
+def formatted_letter(letter: str, count: int) -> str:
+    return f'{letter}{count}' if count > 1 else letter
+
+
 def compress(message: str) -> str:
     """Compress an alphanumeric  by collapsing consecutive values.
 
@@ -24,12 +28,13 @@ def compress(message: str) -> str:
 
         if previous_letter and previous_letter != letter:
             current_letter_count = letter_counts.get(previous_letter, 0)
-            compressed_message += f'{previous_letter}{current_letter_count}' if current_letter_count > 1 else previous_letter
+            compressed_message += formatted_letter(previous_letter, current_letter_count)
             del letter_counts[previous_letter]
 
         letter_counts[letter] += 1
         previous_letter = letter
 
-    compressed_message += f'{previous_letter}{letter_counts.get(letter)}' if letter_counts.get(letter) > 1 else previous_letter
+    last_letter_count = letter_counts.get(letter)
+    compressed_message += formatted_letter(previous_letter, last_letter_count)
 
     return compressed_message
