@@ -2,3 +2,4 @@
 *tmp*
 *.sql
 data/
+*.pyc
