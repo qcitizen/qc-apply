@@ -16,22 +16,19 @@ def compress(message: str) -> str:
     a5f10c
     """
     letter_counts = defaultdict(int)
-    letter_order = ""
+    previous_letter = None
+    compressed_message = ""
     for letter in message:
         if letter.isdigit():
             continue
 
-        letter_counts[letter] += 1
-
-        if letter not in letter_order:
-            letter_order += letter
-
-    compressed_message = ""
-    for letter in letter_order:
-        if letter_count := letter_counts.get(letter):
-            compressed_message += f'{letter}{letter_count}' if letter_count > 1 else letter
-
+        if previous_letter and previous_letter != letter:
+            current_letter_count = letter_counts.get(previous_letter)
+            compressed_message += f'{previous_letter}{current_letter_count}'
         else:
-            raise ValueError('Invalid letter')
+            # previous_letter is equivalent to letter
+            letter_counts[letter] += 1
+
+        previous_letter = letter
 
     return compressed_message
