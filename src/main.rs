@@ -41,6 +41,8 @@ fn string_to_compressed_string(working_str: Vec<char>) -> String {
             continue;
             // Continue until we've found a different char or we're at the end
         } else if working_str[idx_two].is_numeric() {
+            // We could test for is_not_alphabetic and that would catch most all edge cases, but
+            // I'm happy living in fantasy world where I can assume that the input is only alphanumeric
             // Ignore and continue
             numeric_count += 1;
             idx_two += 1;
