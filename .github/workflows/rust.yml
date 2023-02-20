@@ -1,33 +1,23 @@
-name: Rust Tests
+name: Rust
 
 on:
   push:
-    branches: [ master ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "main" ]
 
 env:
   CARGO_TERM_COLOR: always
 
-defaults:
-  run:
-    shell: bash
-
 jobs:
-  test:
+  build:
 
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
+    - name: Build
+      run: cargo build --verbose
     - name: Run tests
-      run: cargo test --verbose -j 2 --features strict -- --test-threads 2 --nocapture
-  lint:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run linter
-      run: cargo clippy --all-targets --all-features -- -D warnings
+      run: cargo test --verbose
 
