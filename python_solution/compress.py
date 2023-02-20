@@ -19,7 +19,26 @@ import string
 
 
 def compress(arbitrary_string: str):
-    pass
+    compressed_string = ""
+    start = 0
+    num_invalid_chars = 0
+    for i in range(len(arbitrary_string)):
+        if arbitrary_string[i] not in string.ascii_letters:
+            num_invalid_chars += 1
+            continue
+        if arbitrary_string[start] == arbitrary_string[i]:
+            continue
+        compressed_string += arbitrary_string[start]
+        count = i-start-num_invalid_chars
+        if count != 1:
+            compressed_string += str(count)
+        start = i
+        num_invalid_chars = 0
+    compressed_string += arbitrary_string[start]
+    count = len(arbitrary_string)-start-num_invalid_chars
+    if count != 1:
+        compressed_string += str(count)
+    return compressed_string
 
 
 def main():
