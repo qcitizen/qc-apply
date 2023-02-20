@@ -2,3 +2,8 @@
 *tmp*
 *.sql
 data/
+
+
+# Added by cargo
+
+/target
