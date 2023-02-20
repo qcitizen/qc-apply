@@ -8,6 +8,13 @@ struct Args {
     arbitrary_string: String,
 }
 
+fn _append_to_output(output: &mut String, char: char, count: usize) {
+    output.push_str(&char.to_string());
+    if count != 1 {
+        output.push_str(&count.to_string());
+    }
+}
+
 // Plan:
 // 1. Take in a string
 // 2. Have two pointers within the string,
@@ -37,15 +44,23 @@ fn string_to_compressed_string(working_str: Vec<char>) -> String {
             idx_two += 1;
             continue;
         }
-        output.push_str(&working_str[idx_one].to_string());
-        output.push_str(&(idx_two - idx_one - numeric_count).to_string());
+        _append_to_output(
+            &mut output,
+            working_str[idx_one],
+            idx_two - idx_one - numeric_count,
+        );
+
+        // Reset and continue
         numeric_count = 0;
-        idx_two += 1;
         idx_one = idx_two;
+        idx_two += 1;
     }
     if idx_one != idx_two {
-        output.push_str(&working_str[idx_one].to_string());
-        output.push_str(&(idx_two - idx_one - numeric_count).to_string());
+        _append_to_output(
+            &mut output,
+            working_str[idx_one],
+            idx_two - idx_one - numeric_count,
+        );
     }
     output
 }
