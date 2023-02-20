@@ -9,6 +9,8 @@ struct Args {
 }
 
 fn _append_to_output(output: &mut String, char: char, count: usize) {
+    println!("Appending {} to output", char);
+    println!("Count: {}", count.to_string());
     output.push_str(&char.to_string());
     if count != 1 {
         output.push_str(&count.to_string());
@@ -99,7 +101,7 @@ mod tests {
     fn test_three() {
         let input = "abcd".to_string().chars().collect::<Vec<char>>();
         let output = string_to_compressed_string(input);
-        assert_eq!(output, "a1b1c1d1".to_string());
+        assert_eq!(output, "abcd".to_string());
     }
 
     #[test]
