@@ -20,7 +20,7 @@ struct Args {
 // 4. Add the number of occurances of that character to the output string
 //    Can be calculated by the index of the second pointer minus the index of the first
 // 5. Repeat until the end of the string
-fn string_to_compressed_string(working_str: Vec<char>) {
+fn string_to_compressed_string(working_str: Vec<char>) -> String {
     let mut output: String = "".to_string();
     let mut idx_one: usize = 0;
     let mut idx_two: usize = 0;
@@ -39,7 +39,7 @@ fn string_to_compressed_string(working_str: Vec<char>) {
         }
         output.push_str(&working_str[idx_one].to_string());
         output.push_str(&(idx_two - idx_one - numeric_count).to_string());
-        numer_count = 0;
+        numeric_count = 0;
         idx_two += 1;
         idx_one = idx_two;
     }
@@ -60,39 +60,44 @@ fn main() {
 }
 
 #[cfg(test)]
-fn test_one() {
-    let input = "aaabccccdd".to_string().chars().collect::<Vec<char>>();
-    let output = string_to_compressed_string(input);
-    assert_eq!(output, "a3bc4d2".to_string());
-}
+mod tests {
+    use super::*;
 
-#[cfg(test)]
-fn test_two() {
-    let input = "aaaaaffffffffffc"
-        .to_string()
-        .chars()
-        .collect::<Vec<char>>();
-    let output = string_to_compressed_string(input);
-    assert_eq!(output, "a5f10c".to_string());
-}
+    #[test]
+    fn test_one() {
+        let input = "aaabccccdd".to_string().chars().collect::<Vec<char>>();
+        let output = string_to_compressed_string(input);
+        assert_eq!(output, "a3bc4d2".to_string());
+    }
 
-#[cfg(test)]
-fn test_three() {
-    let input = "abcd".to_string().chars().collect::<Vec<char>>();
-    let output = string_to_compressed_string(input);
-    assert_eq!(output, "a1b1c1d1".to_string());
-}
+    #[test]
+    fn test_two() {
+        let input = "aaaaaffffffffffc"
+            .to_string()
+            .chars()
+            .collect::<Vec<char>>();
+        let output = string_to_compressed_string(input);
+        assert_eq!(output, "a5f10c".to_string());
+    }
 
-#[cfg(test)]
-fn test_four() {
-    let input = "ccceee12eccceee".to_string().chars().collect::<Vec<char>>();
-    let output = string_to_compressed_string(input);
-    assert_eq!(output, "c3e4c3e3".to_string());
-}
+    #[test]
+    fn test_three() {
+        let input = "abcd".to_string().chars().collect::<Vec<char>>();
+        let output = string_to_compressed_string(input);
+        assert_eq!(output, "a1b1c1d1".to_string());
+    }
 
-#[cfg(test)]
-fn test_five() {
-    let input = "effeac01cb65c".to_string().chars().collect::<Vec<char>>();
-    let output = string_to_compressed_string(input);
-    assert_eq!(output, "ef2eac2bc".to_string());
+    #[test]
+    fn test_four() {
+        let input = "ccceee12eccceee".to_string().chars().collect::<Vec<char>>();
+        let output = string_to_compressed_string(input);
+        assert_eq!(output, "c3e4c3e3".to_string());
+    }
+
+    #[test]
+    fn test_five() {
+        let input = "effeac01cb65c".to_string().chars().collect::<Vec<char>>();
+        let output = string_to_compressed_string(input);
+        assert_eq!(output, "ef2eac2bc".to_string());
+    }
 }
