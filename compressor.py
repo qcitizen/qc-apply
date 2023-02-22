@@ -40,3 +40,35 @@ def compressor(org_str):
     
     return (short_str)
   
+  
+#function to test cases
+def test():
+  
+  # Test 1
+  print("Test 1: aaabccccdd -> a3bc4d2")
+  test_val = compressor("aaabccccdd ")
+  if test_val != "a3bc4d2":
+    print("Incorrect, your output was:" + test_val)
+  else:
+    print("Correct")
+  print()
+          
+  # Test 2
+  print("Test 2: aaaaaffffffffffc -> a5f10c")
+  test_val = compressor("aaaaaffffffffffc")
+  if test_val != "a5f10c":
+    print("Incorrect, your output was:" + test_val)
+  else:
+    print("Correct")
+  print()
+   
+  # Test 3        
+  print("Test 3: abcd -> abcd")
+  test_val = compressor("abcd")
+  if test_val != "abcd":
+    print("Incorrect, your output was:" + test_val)
+  else:
+    print("Correct")
+  
+test()
+  
