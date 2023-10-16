@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"os"
 )
 
@@ -15,4 +16,12 @@ func main() {
 	$ go run main.go <filename>`)
 		return
 	}
+
+	filename := os.Args[1]
+	file, err := os.Open(filename)
+	if err != nil {
+		// could output a cleaner error message here but console output is sufficient for now
+		log.Fatal(err)
+	}
+	defer file.Close()
 }
