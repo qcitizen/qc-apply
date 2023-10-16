@@ -12,9 +12,9 @@ import (
 	"unicode"
 )
 
-var errUsage = errors.New("Usage error")
-var errIllegalCharacter = errors.New("Illegal character")
-var errFile = errors.New("Error opening file")
+var errUsage = errors.New("usage error")
+var errIllegalCharacter = errors.New("illegal character")
+var errFile = errors.New("error opening file")
 
 func main() {
 	err := compressStrings()
@@ -26,7 +26,7 @@ func main() {
 func compressStrings() error {
 	// make sure the command has been run properly and a file to parse has been provided
 	if len(os.Args) != 2 {
-		fmt.Println(`USAGE:
+		log.Print(`USAGE:
 		main.go requires one argument which is the name of the file to be parsed.
 		main.go only looks for that file in the current directory.
 
@@ -39,7 +39,7 @@ func compressStrings() error {
 	file, err := os.Open(filename)
 	if err != nil {
 		// could output a cleaner error message here but default output is sufficient for now
-		fmt.Println(err.Error())
+		log.Print(err.Error())
 		return errFile
 	}
 
@@ -73,7 +73,7 @@ func parseString(initialString string) (string, error) {
 	for _, c := range parsedString {
 		// ensure the character is alphabetic as expected
 		if !unicode.IsLetter(c) {
-			fmt.Println("Illegal character \"" + string(c) + "\" found. (alphanumeric characters only)")
+			log.Print("Illegal character \"" + string(c) + "\" found. (alphanumeric characters only)")
 			return "", errIllegalCharacter
 		}
 
