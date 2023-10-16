@@ -6,6 +6,9 @@ import (
 	"log"
 	"os"
 	"regexp"
+	"strconv"
+	"strings"
+	"unicode"
 )
 
 func main() {
@@ -37,6 +40,37 @@ func main() {
 		regex := regexp.MustCompile("[0-9]+")
 		parsedString := regex.ReplaceAllString(initialString, "")
 
+		// count repeated characters
+		var builder strings.Builder
+		var character rune
+		var charCount = 0
+		for _, c := range parsedString {
+			// ensure the character is alphabetic as expected
+			if !unicode.IsLetter(c) {
+				log.Fatal("Illegal character detected in " + filename + " (alphanumeric characters only)")
+				return
+			}
+
+			if c == character {
+				charCount++
+			} else {
+				builder = buildString(builder, character, charCount)
+
+				character = c
+				charCount = 1
+			}
+		}
+		builder = buildString(builder, character, charCount)
+		parsedString = builder.String()
+
 		fmt.Println(initialString + " → " + parsedString)
 	}
+}
+
+func buildString(builder strings.Builder, r rune, count int) strings.Builder {
+	builder.WriteRune(r)
+	if count > 1 {
+		builder.WriteString(strconv.Itoa(count))
+	}
+	return builder
 }
