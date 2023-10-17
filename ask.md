@@ -6,11 +6,13 @@
 
 ## The problem
 
+#### (TL;DR: A company I worked for had a product which was making a runaway number of API calls to a data provider, costing thousands of dollars per month.)
+
 I was working at a tech startup who wanted to launch a stock market/finance research website. Just info, no trading. The company moved fast and set aggressive deadlines for themselves, so shortcuts were taken to get the site online. We used a Thomson Reuters API service as our data provider, making calls to their API for the latest information which we displayed on the site. A few months after the site was launched, we started getting letters from them that our API account was nearing the end of the introductory period, and that our API usage was well above the threshold of our account level. This was not addressed, and TR started billing us for our usage. This was enough of an expense that I was taken off the team I was working with at the time and asked to investigate and resolve the situation.
 
 ## My solution
 
-#### (TL;DR: I reduced API calls by ~98% and monthly expenses by ~$18,000 while simultaneously providing more accurate and timely information on our website.)
+#### (TL;DR: I reduced API calls by ~98% and monthly expenses by ~$18,000 while simultaneously getting more accurate and timely data from the provider.)
 
 My first step was to investigate the current situation and came to the following findings:
 
