@@ -23,21 +23,23 @@ function process(s: string, prevChar: string, count: number): string {
 }
 
 /**
- * Compresses an alphanumeric string by removing numbers and then collapsing consecutive values.
+ * Compresses a string by removing any character that's not a-z and then collapsing consecutive values.
  *
  * @example
  * // Returns 'a3bc4d2'
- * compress('aaabccccdd');
+ * compress('aaabccccdd123');
  *
  * @param {string} input - The original input string to be compressed.
  * @returns {string} - The compressed string.
  */
 function compress(input: string): string {
-    // Remove numbers from the original string
-    const noNumbers = input.replace(/[0-9]/g, '');
+    // Remove characters that are not a-z from the original string
+    const cleanedInput = input.replace(/[^a-z]/g, '');
 
     // Start processing from the second character (because the first character initializes prevChar)
-    return noNumbers[0] ? process(noNumbers.slice(1), noNumbers[0], 1) : '';
+    return cleanedInput[0] ?
+        process(cleanedInput.slice(1), cleanedInput[0], 1)
+        : '';
 }
 
 /**
