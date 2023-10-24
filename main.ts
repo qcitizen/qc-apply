@@ -1,3 +1,11 @@
+/**
+ * Recursively processes a string to compress consecutive characters.
+ *
+ * @param {string} s - The string to process.
+ * @param {string} prevChar - The previous character that was processed.
+ * @param {number} count - The count of consecutive occurrences of `prevChar`.
+ * @returns {string} - The compressed string segment.
+ */
 function process(s: string, prevChar: string, count: number): string {
     // Base case
     if (s.length === 0) {
@@ -14,6 +22,16 @@ function process(s: string, prevChar: string, count: number): string {
     }
 }
 
+/**
+ * Compresses an alphanumeric string by removing numbers and then collapsing consecutive values.
+ *
+ * @example
+ * // Returns 'a3bc4d2'
+ * compress('aaabccccdd');
+ *
+ * @param {string} input - The original input string to be compressed.
+ * @returns {string} - The compressed string.
+ */
 function compress(input: string): string {
     // Remove numbers from the original string
     const noNumbers = input.replace(/[0-9]/g, '');
