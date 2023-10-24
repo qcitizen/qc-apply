@@ -75,3 +75,10 @@ Try to complete this task within 30 minutes.
 3. Make granular commits as you go so that each one is readible with an accurate commit message.
 4. When you're done, submit your fork as a pull request back to this repo.
 5. To help us stay organized, please email us at careers@quantifiedcitizen.com with the link and a few details about your experience and/or interest in working with us.
+
+# Matthew Sumpter Notes
+- For the purpose of this application, all code simply lives in the `main.ts`. In production, I would typically split utilities into their own files and import them into the main file.
+- I used TypeScript for this exercise. I find it helps me write more readable code and catch errors before they happen.
+- I would typically use Jest for testing, but for the purpose of this exercise I just wrote a few simple tests in the main file.
+- The TypeScript code has already been compiled into `main.js`.
+   - To run the code, simply run `node main.js` in the terminal. 
