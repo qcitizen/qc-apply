@@ -14,4 +14,4 @@ $ mix test
 
 All code is in the `qc.ex` module. Together with Elixir's function clauses, I used `Enum.reduce/3` to compress input strings.
 
-Test cases are in `qc_test.exs`.
+Test cases are in `qc_test.exs`. All other files in this pull request were generated when creating a new mix project.
