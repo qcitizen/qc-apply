@@ -1,20 +1,17 @@
-# Qc
+# Quantified Citizen String Compression Code Assessment
 
-**TODO: Add description**
+Must have Elixir installed on your local machine.
 
-## Installation
+[Elixir installation instructions](https://elixir-lang.org/install.html#by-operating-system)
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `qc` to your list of dependencies in `mix.exs`:
+Run the tests:
 
-```elixir
-def deps do
-  [
-    {:qc, "~> 0.1.0"}
-  ]
-end
+```bash
+$ mix test
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/qc>.
+## Description
+
+All code is in the `qc.ex` module. Together with Elixir's function clauses, I used `Enum.reduce/3` to compress input strings.
+
+Test cases are in `qc_test.exs`.
