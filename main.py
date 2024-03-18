@@ -1,3 +1,6 @@
+import unittest
+
+
 def compress(input_str: str) -> str:
     """
     Compresses the input string by replacing repeated characters with the character followed by the count of the
@@ -6,6 +9,9 @@ def compress(input_str: str) -> str:
     :param input_str: The string to be compressed.
     :return: The compressed string.
     """
+
+    if not isinstance(input_str, str):
+        raise TypeError("Invalid input type. Expected a string.")
 
     if not input_str:
         return ""
@@ -30,15 +36,22 @@ def compress(input_str: str) -> str:
     return result
 
 
+class TestCompress(unittest.TestCase):
+    def test_compress(self):
+        self.assertEqual(compress('aaabccccdd'), 'a3bc4d2')
+        self.assertEqual(compress('aaaaaffffffffffc'), 'a5f10c')
+        self.assertEqual(compress('abcd'), 'abcd')
+        self.assertEqual(compress('ccceee12eccceee'), 'c3e4c3e3')
+        self.assertEqual(compress('effeac01cb65c'), 'ef2eac2bc')
+        self.assertEqual(compress('ef#fea$$c01cb/&@65c'), 'ef2eac2bc')
+
+    def test_compress_empty_string(self):
+        self.assertEqual(compress(''), '')
+
+    def test_compress_invalid_input(self):
+        with self.assertRaises(TypeError):
+            compress(345)
+
+
 if __name__ == "__main__":
-    assert compress('aaabccccdd') == 'a3bc4d2'
-    assert compress('aaaaaffffffffffc') == 'a5f10c'
-    assert compress('abcd') == 'abcd'
-    assert compress('ccceee12eccceee') == 'c3e4c3e3'
-    assert compress('effeac01cb65c') == 'ef2eac2bc'
-
-    # Test case for empty string
-    assert compress('') == ''
-
-    # Additional edge case for string containing special characters
-    assert compress('ef#fea$$c01cb/&@65c') == 'ef2eac2bc'
+    unittest.main()
