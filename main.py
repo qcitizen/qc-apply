@@ -6,8 +6,29 @@ def compress(input_str: str) -> str:
     :param input_str: The string to be compressed.
     :return: The compressed string.
     """
-    return 'hello world'
+
+    if not input_str:
+        return ""
+
+    result = ""
+    count = 1
+    prev_char = input_str[0]
+
+    for char in input_str[1:]:
+        if char.isdigit():
+            continue
+
+        if char == prev_char:
+            count += 1
+        else:
+            result += prev_char if count == 1 else prev_char + str(count)
+            prev_char = char
+            count = 1
+
+    result += prev_char if count == 1 else prev_char + str(count)
+
+    return result
 
 
 if __name__ == "__main__":
-    print(compress('hello worldddddd'))
+    print(compress('aaabccccdd'))
