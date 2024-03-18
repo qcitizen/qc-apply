@@ -37,5 +37,8 @@ if __name__ == "__main__":
     assert compress('ccceee12eccceee') == 'c3e4c3e3'
     assert compress('effeac01cb65c') == 'ef2eac2bc'
 
+    # Test case for empty string
+    assert compress('') == ''
+
     # Additional edge case for string containing special characters
     assert compress('ef#fea$$c01cb/&@65c') == 'ef2eac2bc'
