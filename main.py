@@ -19,8 +19,9 @@ def compress(input_str: str) -> str:
     result = ""
     count = 1
     prev_char = input_str[0]
+    working_str = input_str + 'a'  # Sentinel character to ensure the last character is processed
 
-    for char in input_str[1:]:
+    for char in working_str[1:]:
         if not char.isalpha():
             continue
 
@@ -30,8 +31,6 @@ def compress(input_str: str) -> str:
             result += prev_char if count == 1 else prev_char + str(count)
             prev_char = char
             count = 1
-
-    result += prev_char if count == 1 else prev_char + str(count)
 
     return result
 
