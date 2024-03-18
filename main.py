@@ -15,7 +15,7 @@ def compress(input_str: str) -> str:
     prev_char = input_str[0]
 
     for char in input_str[1:]:
-        if char.isdigit():
+        if not char.isalpha():
             continue
 
         if char == prev_char:
@@ -31,4 +31,11 @@ def compress(input_str: str) -> str:
 
 
 if __name__ == "__main__":
-    print(compress('aaabccccdd'))
+    assert compress('aaabccccdd') == 'a3bc4d2'
+    assert compress('aaaaaffffffffffc') == 'a5f10c'
+    assert compress('abcd') == 'abcd'
+    assert compress('ccceee12eccceee') == 'c3e4c3e3'
+    assert compress('effeac01cb65c') == 'ef2eac2bc'
+
+    # Additional edge case for string containing special characters
+    assert compress('ef#fea$$c01cb/&@65c') == 'ef2eac2bc'
